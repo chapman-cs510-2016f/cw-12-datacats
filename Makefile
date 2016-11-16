@@ -6,7 +6,7 @@
 
 # Sets default compiler options
 export CXX = g++
-export CXXFLAGS = -Wall -O2
+export CXXFLAGS = -Wall -O2 -std=c++11
 # Change to flags below for debugging with gdb
 #export CXXFLAGS = -Wall -O0 -g
 
