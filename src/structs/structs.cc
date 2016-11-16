@@ -25,6 +25,32 @@ int main(void)
     set_vec(w, 1.0, 2.0);
     cout << "Original 2 vector after modification:" << endl;
     print_vec(w);
+    
+    Vec3 a = Vec3();
+    Vec3 b = Vec3();
+    Vec3 c = Vec3();
+    a = set_vec(a, 1.0, 1.0, 1.0);
+    b = set_vec(b, 2.0, 2.0, 2.0);
+    cout << "-----Testing '+' for Vec3-----" << endl;
+    cout << "-----Printing 2 original vectors-----" << endl;
+    print_vec(a);
+    print_vec(b);
+    c = operator+(a, b);
+    cout << "-----Printing addition of vectors-----" << endl;
+    print_vec(c);
+    
+    Vec2 i = Vec2();
+    Vec2 j = Vec2();
+    Vec2 k = Vec2();
+    set_vec(i, 1.0, 1.0);
+    set_vec(j, 2.0, 2.0);
+    cout << "-----Testing '+' for Vec2-----" << endl;
+    cout << "-----Printing 2 original vectors-----" << endl;
+    print_vec(i);
+    print_vec(j);
+    k = operator+(i, j);
+    cout << "-----Printing addition of vectors-----" << endl;
+    print_vec(k);
 
     return 0;
 }
@@ -56,4 +82,24 @@ void print_vec(const Vec2 &wr)
     cout << "2Vector : [" << wr.x << ", " << wr.y << "]" << endl;
 }
 
-//TODO : Implement overloaded + operators
+
+// Unlike in C, operators may be type overloaded in C++ as well
+Vec3 operator+(const Vec3 &a, const Vec3 &b)
+{
+    Vec3 c = Vec3();
+    /*z.x = a.x + b.x;
+    z.y = a.y + b.y;
+    z.z = a.z + b.z;*/
+    c = set_vec(c, a.x + b.x, a.y + b.y, a.z + b.z);
+    return c;
+}
+
+Vec2 operator+(const Vec2 &a, const Vec2 &b)
+{ 
+    Vec2 c = Vec2();
+    /*c.x = a.x + b.x;
+    c.y = a.y + b.y;*/
+    set_vec(c, a.x + b.x, a.y + b.y);
+    return c;
+}
+

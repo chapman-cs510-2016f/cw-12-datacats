@@ -2,7 +2,9 @@
 #include "stack.h"
 
 // TODO: Implementation of print for SValue
-// void print(SValue) {}
+void print(SValue val) {
+    std::cout << val;
+}
 
 // Implementation of default constructor
 Stack::Stack()
@@ -89,7 +91,14 @@ SValue Stack::pop()
 
 
 // TODO: Implementation of empty method
-// bool Stack::empty() const {}
+bool Stack::empty() const
+{
+    if (this->size() == 0)
+    {
+        return true;
+    }
+    return false;
+}
 
 
 // TODO: Implementation of print method
