@@ -67,6 +67,8 @@ void Stack::push(SValue val)
     // automatically deallocated, since it is a unique_ptr
     // Again, we must move the new pointer uniquely to become the new head
     this->head = std::move(new_node_ptr);
+
+    //this->depth = this->size() + 1;
 }
 
 
@@ -102,4 +104,4 @@ bool Stack::empty() const
 
 
 // TODO: Implementation of print method
-// void Stack::print() {}
+//void Stack::print() {}
