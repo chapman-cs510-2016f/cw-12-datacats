@@ -1,4 +1,5 @@
 #include <iostream>
+#include<stdexcept>
 #include "stack.h"
 
 // TODO: Implementation of print for SValue
@@ -31,7 +32,14 @@ std::size_t Stack::size() const
 
 // Implementation of push method
 void Stack::push(SValue val)
-{
+{     
+    if (this->full())
+    {
+        throw std::logic_error("Can not push a full stack!");
+        // TODO: Fix this by throwing an exception properly
+        // https://www.tutorialspoint.com/cplusplus/cpp_exceptions_handling.htm
+        // return -1;
+    }
     // Create a unique_ptr named "new_node_ptr" to manage memory
     // First create a pointer to a zero-allocated Node struct using
     // the "new" keyword. See following equivalence: 
@@ -68,7 +76,7 @@ void Stack::push(SValue val)
     // Again, we must move the new pointer uniquely to become the new head
     this->head = std::move(new_node_ptr);
 
-    //this->depth = this->size() + 1;
+    this->depth++;
 }
 
 
@@ -78,9 +86,10 @@ SValue Stack::pop()
     // Use the empty method to check whether Stack is empty
     if (this->empty())
     {
+        throw std::logic_error("Can not pop an empty stack!");
         // TODO: Fix this by throwing an exception properly
         // https://www.tutorialspoint.com/cplusplus/cpp_exceptions_handling.htm
-        return -1;
+        // return -1;
     }
 
     SValue val = this->head->data;
@@ -88,6 +97,7 @@ SValue Stack::pop()
     this->head = std::move(this->head->next);
     // Again, we allow the unique_ptr to the old head to be deallocated
     // automatically as it goes out of scope 
+    this->depth--;
     return val;
 }
 
@@ -102,6 +112,21 @@ bool Stack::empty() const
     return false;
 }
 
+bool Stack::full() const
+{
+    
+    if(this->depth == 0xffffffffffffffff)
+       return true;
+    return false;
+}
 
 // TODO: Implementation of print method
-//void Stack::print() {}
+void Stack::print() const
+{
+    Node *a = this->head.get();
+    while (a != nullptr)
+    {
+        std::cout << a->data << std::endl;
+        a = a->next.get();
+    }
+}

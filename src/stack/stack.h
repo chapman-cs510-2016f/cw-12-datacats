@@ -122,6 +122,9 @@ public:
 
     // Print method
     void print() const;
+    
+    //Full check method 
+    bool full() const;
 };
 
 #endif // CW12_STACK_H_
