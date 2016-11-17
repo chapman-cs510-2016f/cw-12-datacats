@@ -19,14 +19,15 @@ int main(void) {
     val = s.pop();
     print(val);
     std::cout << std::endl;
-    val = s.pop();
-    print(val);
-    std::cout << std::endl;
+    //val = s.pop();
+    //print(val);
+    //std::cout << std::endl;
+
     std::cout << "Putting items on the stack: 4,5,6" << std::endl;
     s.push(4);
     s.push(5);
     s.push(6);
     std::cout << "Printing the stack:" << std::endl;
-    //s.print();
+    s.print();
     return 0;
 }
