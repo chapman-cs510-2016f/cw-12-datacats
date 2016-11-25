@@ -105,7 +105,7 @@ SValue Stack::pop()
 // TODO: Implementation of empty method
 bool Stack::empty() const
 {
-    if (this->size() == 0)
+    if (this->head == nullptr)
     {
         return true;
     }
