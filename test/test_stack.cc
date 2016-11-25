@@ -10,18 +10,13 @@ int main(void) {
     s.push(2);
     s.push(3);
     std::cout << "Popping items off the stack and printing:" << std::endl;
-    val = s.pop();
-    print(val);
-    std::cout << std::endl;
-    val = s.pop();
-    print(val);
-    std::cout << std::endl;
-    val = s.pop();
-    print(val);
-    std::cout << std::endl;
-    //val = s.pop();
-    //print(val);
-    //std::cout << std::endl;
+
+    while (s.empty() == false ){
+        val = s.pop();
+        print(val);
+        std::cout << std::endl;
+        std::cout << "size remaining: " << s.size() << std::endl;
+    }
 
     std::cout << "Putting items on the stack: 4,5,6" << std::endl;
     s.push(4);
