@@ -1,8 +1,8 @@
 # CS510 CW 12
 
-**Author(s):** _\<your name(s)\>_
+**Author(s):** _Simrath Ratra, Andrew Nguyen_
 
-[![Build Status](https://travis-ci.org/chapman-cs510-2016f/cw-12-YOURNAME.svg?branch=master)](https://travis-ci.org/chapman-cs510-2016f/cw-12-YOURNAME)
+[![Build Status](https://travis-ci.org/chapman-cs510-2016f/cw-12-datacats.svg?branch=master)](https://travis-ci.org/chapman-cs510-2016f/cw-12-datacats)
 
 **Due date:** 2016/11/29
 
@@ -51,7 +51,7 @@ Complete the following exercises, saving your solutions in the indicated files.
 
 Analyze in this section what you found useful about this assignment in your own words. Include any lingering questions or comments that you may have.
 
-**CHANGEME**
+**This assignment was very usefull in learning more about how to further implement coding in C++, and also learning about C++ 2011. I learned the older version of C++ so it was nice to learn about some of the new changes. We also liked playing more with pointers and understanding the underlying code of classes, it helps in learning to code classes in C++ and I'm sure will be helpful in future coding. Valgrand was something new to me, so that was interesting to use, and I liked how this assignment had some focus on good coding practices, such as error handling and making sure there is no memory leaks.**
 
 ## Honor Pledge
 
@@ -62,4 +62,4 @@ I pledge that all the work in this repository is my own with only the following 
 
 Signed,
 
-**YOURNAME**
+**Simrath Ratra, Andrew Nguyen**
