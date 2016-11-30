@@ -1,5 +1,6 @@
 #include <iostream>
 #include<stdexcept>
+#include <limits>
 #include "stack.h"
 
 // TODO: Implementation of print for SValue
@@ -32,14 +33,13 @@ std::size_t Stack::size() const
 
 // Implementation of push method
 void Stack::push(SValue val)
-{     
+{
     if (this->full())
-    {
         throw std::logic_error("Can not push a full stack!");
         // TODO: Fix this by throwing an exception properly
         // https://www.tutorialspoint.com/cplusplus/cpp_exceptions_handling.htm
         // return -1;
-    }
+
     // Create a unique_ptr named "new_node_ptr" to manage memory
     // First create a pointer to a zero-allocated Node struct using
     // the "new" keyword. See following equivalence: 
@@ -114,8 +114,8 @@ bool Stack::empty() const
 
 bool Stack::full() const
 {
-    
-    if(this->depth == 0xffffffffffffffff)
+    //if(this->depth == 0xffffffffffffffff);
+    if(this->depth >= std::numeric_limits<size_t>::max());
        return true;
     return false;
 }
