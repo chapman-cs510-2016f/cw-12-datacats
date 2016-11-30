@@ -34,8 +34,8 @@ std::size_t Stack::size() const
 // Implementation of push method
 void Stack::push(SValue val)
 {
-    if (this->full())
-        throw std::logic_error("Can not push a full stack!");
+    //if (this->full())
+    //    throw std::logic_error("Can not push a full stack!");
         // TODO: Fix this by throwing an exception properly
         // https://www.tutorialspoint.com/cplusplus/cpp_exceptions_handling.htm
         // return -1;
