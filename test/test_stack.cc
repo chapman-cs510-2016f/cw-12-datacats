@@ -15,7 +15,6 @@ int main(void) {
         val = s.pop();
         print(val);
         std::cout << std::endl;
-        std::cout << "size remaining: " << s.size() << std::endl;
     }
 
     std::cout << "Putting items on the stack: 4,5,6" << std::endl;
